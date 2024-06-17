@@ -19,8 +19,8 @@ public class Main {
 
 
     public static class Exchanger {
-        private Object object = null;
-        private boolean hasObject = false;
+        private volatile Object object = null;
+        private volatile boolean hasObject = false;
 
         public synchronized void setObject(Object object) {
             this.object = object;
